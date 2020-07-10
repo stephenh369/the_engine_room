@@ -12,6 +12,16 @@ manufacturer1 = Manufacturer.new({
     'models' => ['Fiesta', 'Focus', 'Mustang', 'Transit']
 })
 manufacturer1.save()
+manufacturer2 = Manufacturer.new({
+    'name' => 'BMW',
+    'models' => ['3 Series', '5 Series', 'M4', 'E46 M3']
+})
+manufacturer2.save()
+manufacturer3 = Manufacturer.new({
+    'name' => 'Toyota',
+    'models' => ['Corolla', 'Land Cruiser', 'MR2(Mk2)', 'Supra(Mk4)']
+})
+manufacturer3.save()
 
 
 # UPDATE/DELETE

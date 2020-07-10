@@ -13,6 +13,7 @@ CREATE TABLE cars (
     model VARCHAR(255),
     condition VARCHAR(255),
     type VARCHAR(255),
+    year VARCHAR(255),
     engine VARCHAR(255),
     transmission VARCHAR(255),
     fuel_type VARCHAR(255),
