@@ -35,4 +35,10 @@ class Manufacturer
         SqlRunner.run(sql)
     end
 
+    def self.all()
+        sql = "SELECT * FROM manufacturers"
+        result = SqlRunner.run(sql)
+        return result.map() {|manufacturer| Manufacturer.new(manufacturer)}
+    end
+
 end
