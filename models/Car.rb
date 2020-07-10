@@ -21,5 +21,53 @@ class Car
         @sell_stock = options['sell_stock'].to_i
     end
 
+    def save()
+        sql = "INSERT INTO cars (
+            manufacturer, model, condition, type, year, engine, transmission, fuel_type,
+            description, stock, buy_stock, sell_stock
+        ) 
+        VALUES (
+            $1, $2, $3, $4, $5, $6, $7, $8,
+            $9, $10, $11, $12
+        ) RETURNING id"
+        values = [
+            @manufacturer, @model, @condition, @type, @year, @engine,
+            @transmission, @fuel_type, @description, @stock, @buy_stock, @sell_stock
+        ]
+        result = SqlRunner.run(sql, values).first
+        @id = result['id'].to_i
+    end
+
+    def update()
+        sql = "UPDATE cars SET (
+            manufacturer, model, condition, type, year, engine, transmission, fuel_type,
+            description, stock, buy_stock, sell_stock
+        ) = (
+            $1, $2, $3, $4, $5, $6, $7, $8,
+            $9, $10, $11, $12
+        ) WHERE id = $13"
+        values = [
+            @manufacturer, @model, @condition, @type, @year, @engine,
+            @transmission, @fuel_type, @description, @stock, @buy_stock, @sell_stock
+        ]
+        SqlRunner.run(sql, values)
+    end
+
+    def delete()
+        sql = "DELETE FROM cars WHERE id = $1"
+        values = [@id]
+        SqlRunner.run(sql, values)
+    end
+
+    def self.delete_all()
+        sql = "DELETE FROM cars"
+        SqlRunner.run(sql)
+    end
+
+    def self.all()
+        sql = "SELECT * FROM cars"
+        result = SqlRunner.run(sql)
+        return result.map() {|car| Car.new(car)}
+    end
 
 end
