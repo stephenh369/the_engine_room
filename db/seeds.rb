@@ -8,6 +8,8 @@ manufacturer1 = Manufacturer.new({
 })
 manufacturer1.save()
 
+# manufacturer1.models.push('Ka')
+# manufacturer1.update()
 
 
 
