@@ -3,7 +3,7 @@ require_relative('../db/sql_runner')
 class Car
 
     attr_reader :id, :manufacturer, :model, :condition, :type, :year, :engine,
-    :transmission, :fuel_type, :description, :stock, :buy_stock, :sell_stock
+    :transmission, :fuel_type, :description, :stock, :buy_price, :sell_price
 
     def initialize(options)
         @id = options['id'].to_i if options['id']
@@ -17,14 +17,14 @@ class Car
         @fuel_type = options['fuel_type']
         @description = options['description']
         @stock = options['stock'].to_i
-        @buy_stock = options['buy_stock'].to_i
-        @sell_stock = options['sell_stock'].to_i
+        @buy_price = options['buy_price'].to_i
+        @sell_price = options['sell_price'].to_i
     end
 
     def save()
         sql = "INSERT INTO cars (
             manufacturer, model, condition, type, year, engine, transmission, fuel_type,
-            description, stock, buy_stock, sell_stock
+            description, stock, buy_price, sell_price
         ) 
         VALUES (
             $1, $2, $3, $4, $5, $6, $7, $8,
@@ -32,7 +32,7 @@ class Car
         ) RETURNING id"
         values = [
             @manufacturer, @model, @condition, @type, @year, @engine,
-            @transmission, @fuel_type, @description, @stock, @buy_stock, @sell_stock
+            @transmission, @fuel_type, @description, @stock, @buy_price, @sell_price
         ]
         result = SqlRunner.run(sql, values).first
         @id = result['id'].to_i
@@ -41,14 +41,14 @@ class Car
     def update()
         sql = "UPDATE cars SET (
             manufacturer, model, condition, type, year, engine, transmission, fuel_type,
-            description, stock, buy_stock, sell_stock
+            description, stock, buy_price, sell_price
         ) = (
             $1, $2, $3, $4, $5, $6, $7, $8,
             $9, $10, $11, $12
         ) WHERE id = $13"
         values = [
             @manufacturer, @model, @condition, @type, @year, @engine,
-            @transmission, @fuel_type, @description, @stock, @buy_stock, @sell_stock
+            @transmission, @fuel_type, @description, @stock, @buy_price, @sell_price
         ]
         SqlRunner.run(sql, values)
     end

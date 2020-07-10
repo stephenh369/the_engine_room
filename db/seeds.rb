@@ -5,6 +5,7 @@ require_relative( "../models/Car" )
 
 # RESET
 Manufacturer.delete_all()
+Car.delete_all()
 
 # OBJECTS
 manufacturer1 = Manufacturer.new({
@@ -22,6 +23,22 @@ manufacturer3 = Manufacturer.new({
     'models' => ['Corolla', 'Land Cruiser', 'MR2(Mk2)', 'Supra(Mk4)']
 })
 manufacturer3.save()
+
+car1 = Car.new({
+    'manufacturer' => manufacturer1.id,
+    'model' => manufacturer1.models[0],
+    'condition' => 'Used - Like New',
+    'type' => 'Hatchback',
+    'year' => '2015',
+    'engine' => '1.6L',
+    'transmission' => 'Manual',
+    'fuel_type' => 'Petrol',
+    'description' => 'Great runner, never tracked or abused, 1 lady owner.',
+    'stock' => 1,
+    'buy_price' => 10000,
+    'sell_price' => 12999
+})
+car1.save()
 
 
 # UPDATE/DELETE
