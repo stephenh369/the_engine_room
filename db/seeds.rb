@@ -3,6 +3,9 @@ require('pry-byebug')
 require_relative( "../models/Manufacturer" )
 require_relative( "../models/Car" )
 
+# RESET
+Manufacturer.delete_all()
+
 # OBJECTS
 manufacturer1 = Manufacturer.new({
     'name' => 'Ford',
