@@ -1,5 +1,21 @@
+<h1>The Engine Room</h1>
+<h3>Car Showroom</h3>
+
 <nav class ="main-nav">
     <a class="btn" href="/">Home</a>
     <a class="btn" href="/cars">Stock List</a>
     <a class="btn" href="/manufacturers">Manufacturer List</a>
 </nav>
+
+<ul>
+    <% for car in @cars %>
+    <li class="obj-container">
+        <p class="obj-header">Manufacturer: <%= car.manufacturer? %></p>
+        <p class="obj-header">Model: <%= car.model %></p>
+        <p class="obj-header">Year: <%= car.year %></p>
+        <p class="obj-header">Stock: <%= car.stock %></p>
+        <p class="obj-header">Sell Price: £<%= car.sell_price %></p>
+        <a class="btn" href="/cars/:id">Details</a>
+    </li>
+    <% end %>
+</ul>
