@@ -1,0 +1,12 @@
+<h3>New Entry</h3>
+
+<form method="post" action="/cars">
+    <label for="manufacturer/model-select">
+        Manufacturer: 
+        <select id="manufacturer-select" name="manufacturer">
+            <% @manufacturers.each do |manufacturer| %>
+            <option value="<%= manufacturer.id%>"><%= manufacturer.name%></option>
+            <% end %>
+    </label>
+
+</form>
