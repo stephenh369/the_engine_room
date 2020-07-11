@@ -1,0 +1,68 @@
+<h3>Edit Entry</h3>
+
+<form method="post" action="/cars/<%= @car.id %>">
+    <label for="manufacturer-select">Manufacturer: </label>
+        <select id="manufacturer-select" name="manufacturer">
+            <% @manufacturers.each do |manufacturer| %>
+            <option value="<%= manufacturer.id %>"
+            <%= "selected" if @car.manufacturer == manufacturer.id %>><%= manufacturer.name %></option>
+            <% end %>
+        </select>
+
+    <label for="model-input">Model: </label>
+        <input id="model-input" type="text" name="model" value="<%= @car.model %>"/>
+
+    <label for="condition-select">Condition: </label>
+        <select id="condition-select" name="condition">
+            <option value="New"<%= "selected" if @car.condition == "New" %>>New</option>
+            <option value="Used - Like New"<%= "selected" if @car.condition == "Used - Like New" %>>Used - Like New</option>
+            <option value="Used - Good"<%= "selected" if @car.condition == "Used - Good" %>>Used - Good</option>
+            <option value="Used - Fair"<%= "selected" if @car.condition == "Used - Fair" %>>Used - Fair</option>
+            <option value="Spares/Repairs"<%= "selected" if @car.condition == "Spares/Repairs" %>>Spares/Repairs</option>
+        </select>
+
+    <label for="type-select">Type: </label>
+        <select id="type-select" name="type">
+            <option value="Hatchback"<%= "selected" if @car.type == "Hatchback" %>>Hatchback</option>
+            <option value="Coupe"<%= "selected" if @car.type == "Coupe" %>>Coupe</option>
+            <option value="Saloon"<%= "selected" if @car.type == "Saloon" %>>Saloon</option>
+            <option value="Estate"<%= "selected" if @car.type == "Estate" %>>Estate</option>
+            <option value="Convertible"<%= "selected" if @car.type == "Convertible" %>>Convertible</option>
+            <option value="SUV"<%= "selected" if @car.type == "SUV" %>>SUV</option>
+            <option value="MPV"<%= "selected" if @car.type == "MPV" %>>MPV</option>
+            <option value="Commercial"<%= "selected" if @car.type == "Commercial" %>>Commercial</option>
+        </select>
+
+    <label for="year-input">Year: </label>
+        <input id="year-input" type="text" name="year" value="<%= @car.year %>"/>
+    
+    <label for="engine-input">Engine: </label>
+        <input id="engine-input" type="text" name="engine" value="<%= @car.engine %>"/>
+
+    <label for="transmission-select">Transmission: </label>
+        <select id="transmission-select" name="transmission">
+            <option value="Automatic"<%= "selected" if @car.transmission == "Automatic" %>>Automatic</option>
+            <option value="Manual"<%= "selected" if @car.transmission == "Manual" %>>Manual</option>
+        </select>
+
+    <label for="fuel_type-select">Fuel Type: </label>
+        <select id="fuel_type-select" name="fuel_type">
+            <option value="Petrol"<%= "selected" if @car.fuel_type == "Petrol" %>>Petrol</option>
+            <option value="Diesel"<%= "selected" if @car.fuel_type == "Diesel" %>>Diesel</option>
+            <option value="Electric"<%= "selected" if @car.fuel_type == "Electric" %>>Electric</option>
+        </select>
+
+    <label for="description-input">Description: </label>
+        <textarea id="description-input" type="text" name="description"><%= @car.description %></textarea>
+
+    <label for="stock-input">Stock: </label>
+        <input id="stock-input" type="number" name="stock" value="<%= @car.stock %>"/>
+
+     <label for="buy_price-input">Buy Price: £ </label>
+        <input id="buy_price-input" type="number" name="buy_price" value="<%= @car.buy_price %>"/>
+
+    <label for="sell_price-input">Sell Price: £ </label>
+        <input id="sell_price-input" type="number" name="sell_price" value="<%= @car.sell_price %>"/>
+    <hr/>
+    <input class="btn" type="submit" value="Update Car"/>
+</form>

@@ -30,12 +30,12 @@ end
 
 get '/cars/:id/edit' do
     @car = Car.find(params[:id].to_i)
+    @manufacturers = Manufacturer.all()
     erb(:"cars/edit")
 end
 
 post '/cars' do
-    car = Car.new(params)
-    car.save
+    Car.new(params).save()
     redirect "/cars"
 end
 
@@ -46,6 +46,7 @@ post '/cars/:id/delete' do
 end
 
 post '/cars/:id' do
-    Car.new(params).update()
+    @car = Car.new(params)
+    @car.update()
     redirect "/cars"
 end

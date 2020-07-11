@@ -48,7 +48,7 @@ class Car
         ) WHERE id = $13"
         values = [
             @manufacturer, @model, @condition, @type, @year, @engine,
-            @transmission, @fuel_type, @description, @stock, @buy_price, @sell_price
+            @transmission, @fuel_type, @description, @stock, @buy_price, @sell_price, @id
         ]
         SqlRunner.run(sql, values)
     end
