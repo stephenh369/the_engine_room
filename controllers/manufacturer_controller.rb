@@ -1,0 +1,6 @@
+require('sinatra')
+require('sinatra/contrib/all')
+require('pry-byebug')
+require_relative('../models/Manufacturer')
+require_relative('../models/Car')
+also_reload('../models/*')
