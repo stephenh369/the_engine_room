@@ -13,7 +13,11 @@
         <p class="obj-header">Manufacturer: <%= car.manufacturer? %></p>
         <p class="obj-header">Model: <%= car.model %></p>
         <p class="obj-header">Year: <%= car.year %></p>
-        <p class="obj-header">Stock: <%= car.stock %></p>
+        <p class="obj-header">Stock: <%= car.stock %>
+        <span class="stock-span-1"><%= @span1 %></span>
+        <span class="stock-span-2"><%= @span2 %></span>
+        <span class="stock-span-3"><%= @span3 %></span>
+        </p>
         <p class="obj-header">Sell Price: £<%= car.sell_price %></p>
         <a class="btn" href="/cars/<%= car.id %>">Details</a>
     </li>
