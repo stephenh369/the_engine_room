@@ -1,6 +1,5 @@
 require('sinatra')
 require('sinatra/contrib/all')
-require('pry-byebug')
 require_relative('../models/Car')
 require_relative('../models/Manufacturer')
 also_reload('../models/*')
@@ -8,13 +7,6 @@ also_reload('../models/*')
 get '/cars' do
     @cars = Car.all()
     @manufacturers = Manufacturer.all()
-    if @cars.first.stock == 0
-        @span1 = "Out Of Stock"
-    elsif @cars.first.stock == 1
-        @span2 = "Available"
-    elsif @cars.first.stock > 1
-        @span3 = "More Than 1 Available"
-    end
     erb(:"cars/index")
 end
 
