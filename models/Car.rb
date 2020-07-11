@@ -70,4 +70,12 @@ class Car
         return result.map() {|car| Car.new(car)}
     end
 
+    def self.find(id)
+        sql = "SELECT * FROM cars WHERE id = $1"
+        values = [id]
+        car = SqlRunner.run(sql, values)
+        result = Car.new(car.first)
+        return result
+    end
+
 end

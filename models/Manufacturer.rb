@@ -30,7 +30,7 @@ class Manufacturer
         SqlRunner.run(sql, values)
     end
 
-    def models()
+    def model_list()
         sql = "SELECT models FROM manufacturers WHERE id = $1"
         values = [@id]
         result = SqlRunner.run(sql, values)
