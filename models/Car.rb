@@ -59,6 +59,11 @@ class Car
         SqlRunner.run(sql, values)
     end
 
+    def manufacturer?()
+        manufacturer = Manufacturer.find(@manufacturer)
+        return manufacturer.name
+    end
+
     def self.delete_all()
         sql = "DELETE FROM cars"
         SqlRunner.run(sql)
