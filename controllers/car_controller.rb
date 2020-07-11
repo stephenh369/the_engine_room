@@ -28,6 +28,11 @@ get '/cars/:id' do
     erb(:"cars/show")
 end
 
+get '/pizza-orders/:id/edit' do
+    @car = Car.find(params[:id].to_i)
+    erb(:"cars/edit")
+end
+
 post '/cars' do
     car = Car.new(params)
     car.save
