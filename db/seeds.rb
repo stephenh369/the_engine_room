@@ -26,7 +26,7 @@ manufacturer3.save()
 
 car1 = Car.new({
     'manufacturer' => manufacturer1.id,
-    'model' => manufacturer1.models[0],
+    'model' => "Fiesta",
     'condition' => 'Used - Like New',
     'type' => 'Hatchback',
     'year' => '2015',
