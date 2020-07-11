@@ -28,7 +28,7 @@ get '/cars/:id' do
     erb(:"cars/show")
 end
 
-get '/pizza-orders/:id/edit' do
+get '/cars/:id/edit' do
     @car = Car.find(params[:id].to_i)
     erb(:"cars/edit")
 end

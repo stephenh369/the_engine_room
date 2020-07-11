@@ -15,7 +15,7 @@
         <p class="obj-header">Buy Price: £<%= @car.buy_price %></p>
         <p class="obj-header">Sell Price: £<%= @car.sell_price %></p>
         <a class="btn" href="/cars">Back To Inventory</a>
-        <%# <a class="btn" href="/cars/edit">Edit</a> %>
+        <a class="btn" href="/cars/<%= @car.id %>/edit">Edit</a>
         <form method="post" action="/cars/<%= @car.id %>/delete">
             <input class="btn" type="submit" value="Delete Car"/>
         </form>
