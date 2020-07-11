@@ -44,3 +44,8 @@ post '/cars/:id/delete' do
     @car.delete()
     redirect "/cars"
 end
+
+post '/cars/:id' do
+    Car.new(params).update()
+    redirect "/cars"
+end
