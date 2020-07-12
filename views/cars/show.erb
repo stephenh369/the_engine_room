@@ -1,23 +1,31 @@
-    <div class="obj-container">
-        <p class="obj-header">Manufacturer: <%= @car.manufacturer? %></p>
-        <p class="obj-header">Model: <%= @car.model %></p>
-        <p class="obj-header">Condition: <%= @car.condition %></p>
-        <p class="obj-header">Type: <%= @car.type %></p>
-        <p class="obj-header">Year: <%= @car.year %></p>
-        <p class="obj-header">Engine: <%= @car.engine %></p>
-        <p class="obj-header">Transmission: <%= @car.transmission %></p>
-        <p class="obj-header">Fuel Type: <%= @car.fuel_type %></p>
-        <p class="obj-header">Description: <%= @car.description %></p>
-        <p class="obj-header">Stock: 
+    <div class="show-info-div">
+        <p class="show-info">Manufacturer: <%= @car.manufacturer? %></p>
+        <p class="show-info">Model: <%= @car.model %></p>
+        <p class="show-info">Condition: <%= @car.condition %></p>
+        <p class="show-info">Type: <%= @car.type %></p>
+        <p class="show-info">Year: <%= @car.year %></p>
+        <p class="show-info">Engine: <%= @car.engine %></p>
+        <p class="show-info">Transmission: <%= @car.transmission %></p>
+        <p class="show-info">Fuel Type: <%= @car.fuel_type %></p>
+        <p class="show-info">Description: <%= @car.description %></p>
+        <p class="show-info">Stock: 
         <span class="stock-span-1"><%= @span1 %></span>
         <span class="stock-span-2"><%= @span2 %></span>
         <span class="stock-span-3"><%= @span3 %></span></p>
-        <p class="obj-header">Buy Price: £<%= @car.buy_price %></p>
-        <p class="obj-header">Sell Price: £<%= @car.sell_price %></p>
+        <p class="show-info">Buy Price: £<%= @car.buy_price %></p>
+        <p class="show-info">Sell Price: £<%= @car.sell_price %></p>
         <hr/>
-        <a class="btn" href="/cars">Back To Inventory</a>
-        <a class="btn" href="/cars/<%= @car.id %>/edit">Edit</a>
-        <form method="post" action="/cars/<%= @car.id %>/delete">
-            <input class="btn" type="submit" value="Delete Car"/>
-        </form>
+        <div class ="show-btn-div">
+            <form method="get" action="/cars">
+                <input class="btn btn-show" type="submit" value="Back To Inventory"/>
+            </form>
+
+            <form method="get" action="/cars/<%= @car.id %>/edit">
+                <input class="btn btn-show" type="submit" value="Edit"/>
+            </form>
+            
+            <form method="post" action="/cars/<%= @car.id %>/delete">
+                <input class="btn btn-show" type="submit" value="Delete Car"/>
+            </form>
+        </div>
     </div>
