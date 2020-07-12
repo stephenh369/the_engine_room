@@ -10,7 +10,7 @@ Car.delete_all()
 # OBJECTS
 manufacturer1 = Manufacturer.new({
     'name' => 'Ford',
-    'models' => ['Fiesta', 'Focus', 'Mustang', 'Transit']
+    'models' => ["Fiesta", "Focus", "Mustang", "Transit"]
 })
 manufacturer1.save()
 manufacturer2 = Manufacturer.new({

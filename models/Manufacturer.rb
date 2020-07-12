@@ -34,7 +34,7 @@ class Manufacturer
         sql = "SELECT models FROM manufacturers WHERE id = $1"
         values = [@id]
         result = SqlRunner.run(sql, values)
-        return result.first
+        return result.map() {|model| Manufacturer.new(model)}
     end
 
     def self.delete_all()
