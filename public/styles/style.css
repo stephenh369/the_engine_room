@@ -8,6 +8,7 @@
 }
 
 * {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,10 +38,11 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-top: 2.5%;
-    margin-left: 7.5%;
+
 }
 .btn {
-    padding: 10px;
+    padding: 15px;
+    width: 30%;
     text-align: center;
     text-decoration: none;
     background-color: var(--light-color);
@@ -50,15 +52,19 @@ body {
 }
 
 .btn-index {
-    padding-left: 50px;
-    padding-right: 50px;
+    width: 33%;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-#manufacturer-list-btn {
-    
+
+.current {
+    background-color: var(--alt-color);
+    opacity: 0.5;
 }
 
 .btn:hover {
     background-color: var(--main-color);
     color: var(--light-color);
+    opacity: 0.9;
 }
