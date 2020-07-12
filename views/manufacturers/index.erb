@@ -1,0 +1,19 @@
+<h1>The Engine Room</h1>
+<h3>Car Showroom</h3>
+
+<nav class ="main-nav">
+    <a class="btn" href="/">Home</a>
+    <a class="btn" href="/cars">Stock List</a>
+    <a class="btn" href="/manufacturers">Manufacturer List</a>
+</nav>
+
+<ul>
+    <% for manufacturer in @manufacturers %>
+    <li class="obj-container">
+        <p class="obj-header">Manufacturer Name: <%= manufacturer.name %></p>
+        <p class="obj-header">Models: <%= manufacturer.models %></p>
+        <a class="btn" href="/manufacturers/<%= manufacturer.id %>">Details</a>
+    </li>
+    <% end %>
+    <li><a class="obj-container" id="obj-container-placeholder" href="/manufacturers/new">New Entry(Manufacturer)</a></li>
+</ul>
