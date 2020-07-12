@@ -36,7 +36,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex: 3;
     margin-top: 2.5%;
     margin-left: 7.5%;
 }
@@ -53,6 +52,10 @@ body {
 .btn-index {
     padding-left: 50px;
     padding-right: 50px;
+}
+
+#manufacturer-list-btn {
+    
 }
 
 .btn:hover {
