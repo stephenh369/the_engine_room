@@ -23,7 +23,7 @@ get '/cars/:id' do
     elsif @car.stock == 1
         @span2 = "Available"
     elsif @car.stock > 1
-        @span3 = "More Than 1 Available"
+        @span3 = "More Than 1 Available (#{@car.stock})"
     end
     erb(:"cars/show")
 end

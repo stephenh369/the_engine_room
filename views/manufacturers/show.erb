@@ -1,9 +1,15 @@
-<div class="obj-container">
-    <p class="obj-header">Manufacturer Name: <%= @manufacturer.name %></p>
-    <p class="obj-header">Models Currently Stocked: <%= @manufacturer.models %></p>
+<div class="show-info-div">
+    <p class="show-info">Manufacturer Name: <%= @manufacturer.name %></p>
+    <p class="show-info">Models Currently Stocked: <%= @manufacturer.models %></p>
     <hr/>
-    <a class="btn" href="/cars">Back To Inventory</a>
-    <form method="post" action="/manufacturers/<%= @manufacturer.id %>/delete">
-        <input class="btn" type="submit" value="Delete Manufacturer"/>
-    </form>
+
+    <div class ="show-btn-div">
+        <form method="get" action="/manufacturers">
+            <input class="btn btn-show" type="submit" value="Back To Inventory"/>
+        </form>
+            
+        <form method="post" action="/manufacturers/<%= @manufacturer.id %>/delete">
+            <input class="btn btn-show" type="submit" value="Delete Manufacturer"/>
+        </form>
+    </div>
 </div>

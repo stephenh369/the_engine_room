@@ -95,3 +95,15 @@ body {
     color: var(--light-color);
     opacity: 0.9;
 }
+
+.stock-span-1 {
+    color: red;
+}
+
+.stock-span-2 {
+    color: green;
+}
+
+.stock-span-3 {
+    color: blue;
+}
