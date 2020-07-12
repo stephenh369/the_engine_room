@@ -35,7 +35,7 @@ get '/cars/:id/edit' do
 end
 
 post '/cars' do
-    Car.new(params).save()
+    @car = Car.new(params).save()
     redirect "/cars"
 end
 

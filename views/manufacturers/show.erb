@@ -1,0 +1,9 @@
+<div class="obj-container">
+    <p class="obj-header">Manufacturer Name: <%= @manufacturer.name %></p>
+    <p class="obj-header">Models Currently Stocked: <%= @manufacturer.models %></p>
+    <hr/>
+    <a class="btn" href="/cars">Back To Inventory</a>
+    <form method="post" action="/manufacturers/<%= @manufacturer.id %>/delete">
+        <input class="btn" type="submit" value="Delete Manufacturer"/>
+    </form>
+</div>

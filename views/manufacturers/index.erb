@@ -11,7 +11,7 @@
     <% for manufacturer in @manufacturers %>
     <li class="obj-container">
         <p class="obj-header">Manufacturer Name: <%= manufacturer.name %></p>
-        <p class="obj-header">Models: <%= manufacturer.models %>
+        <p class="obj-header">Models Currently Stocked: <%= manufacturer.models %>
         </p>
         <a class="btn" href="/manufacturers/<%= manufacturer.id %>">Details</a>
     </li>

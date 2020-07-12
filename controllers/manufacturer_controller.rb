@@ -18,3 +18,14 @@ get '/manufacturers/:id' do
     @manufacturer = Manufacturer.find(params[:id].to_i)
     erb(:"manufacturers/show")
 end
+
+post '/manufacturers' do
+    Manufacturer.new(params).save()
+    redirect "/manufacturers"
+end
+
+post '/manufacturers/:id/delete' do
+    @manufacturer = Manufacturer.find(params[:id].to_i)
+    @manufacturer.delete()
+    redirect "/manufacturers"
+end
