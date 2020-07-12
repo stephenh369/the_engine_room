@@ -24,8 +24,6 @@ body {
     color: var(--light-color);
 }
 
-/* UTILITY */
-
 .main-nav {
     display: flex;
     align-items: center;
@@ -40,8 +38,27 @@ body {
     margin-top: 2.5%;
 
 }
+
+.obj-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+    margin: 5px;
+    margin-right: 7px;
+    list-style: none;
+}
+
+.obj-container {
+    display: grid;
+    justify-items: end;
+    /* text-align: end; */
+
+}
+
+/* UTILITY */
+
 .btn {
-    padding: 15px;
+    padding: 0.75rem;
     width: 30%;
     text-align: center;
     text-decoration: none;
