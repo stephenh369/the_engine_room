@@ -53,11 +53,18 @@ body {
     justify-items: end;
 }
 
-.show-btn-div {
+.btn-div {
     display: flex;
     width: 40%;
     justify-content: space-evenly;
     padding-top: 3px;
+}
+
+.new-entry-div {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
 }
 
 /* UTILITY */

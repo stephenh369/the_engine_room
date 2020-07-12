@@ -1,6 +1,6 @@
 <h3>New Entry</h3>
 
-<form method="post" action="/cars">
+<form class="new-entry-div" method="post" action="/cars">
     <label for="manufacturer-select">Manufacturer: </label>
         <select id="manufacturer-select" name="manufacturer">
             <% @manufacturers.each do |manufacturer| %>
@@ -62,7 +62,12 @@
 
     <label for="sell_price-input">Sell Price: £ </label>
         <input id="sell_price-input" type="number" name="sell_price"/>
-    <hr/>
-    <a class="btn" href="/cars">Back To Inventory</a>
-    <input class="btn" type="submit" value="Add Car"/>
+
+        <input class="btn btn-show" type="submit" value="Add Car"/>
 </form>
+<hr/>
+    <div class="new-entry-div">
+        <form method="get" action="/cars">
+            <input class="btn btn-show" type="submit" value="Back To Inventory"/>
+        </form>
+    </div>
