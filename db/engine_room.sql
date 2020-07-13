@@ -3,8 +3,7 @@ DROP TABLE IF EXISTS manufacturers;
 
 CREATE TABLE manufacturers (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
-    models VARCHAR(255)
+    name VARCHAR(255)
 );
 
 CREATE TABLE cars (

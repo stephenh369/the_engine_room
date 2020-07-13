@@ -2,25 +2,24 @@ require_relative('../db/sql_runner')
 
 class Manufacturer
 
-    attr_reader :id, :name, :models
+    attr_reader :id, :name
 
     def initialize(options)
         @id = options['id'].to_i if options['id']
         @name = options['name']
-        @models = options['models']
     end
 
     def save()
-        sql = "INSERT INTO manufacturers (name, models) 
-        VALUES ($1, $2) RETURNING id"
-        values = [@name, @models]
+        sql = "INSERT INTO manufacturers (name) 
+        VALUES ($1) RETURNING id"
+        values = [@name]
         result = SqlRunner.run(sql, values).first
         @id = result['id'].to_i
     end
 
     def update()
-        sql = "UPDATE manufacturers SET (name, models) = ($1, $2) WHERE id = $3"
-        values = [@name, @models, @id]
+        sql = "UPDATE manufacturers SET (name) = ($1) WHERE id = $2"
+        values = [@name, @id]
         SqlRunner.run(sql, values)
     end
 
@@ -31,10 +30,10 @@ class Manufacturer
     end
 
     def model_list()
-        sql = "SELECT models FROM manufacturers WHERE id = $1"
+        sql = "SELECT * FROM cars WHERE manufacturer = $1"
         values = [@id]
-        result = SqlRunner.run(sql, values)
-        return result.map() {|model| Manufacturer.new(model)}
+        result = SqlRunner.run(sql, values).first
+        return result
     end
 
     def self.delete_all()

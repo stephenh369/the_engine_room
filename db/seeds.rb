@@ -9,18 +9,15 @@ Car.delete_all()
 
 # OBJECTS
 manufacturer1 = Manufacturer.new({
-    'name' => 'Ford',
-    'models' => []
+    'name' => 'Ford'
 })
 manufacturer1.save()
 manufacturer2 = Manufacturer.new({
-    'name' => 'BMW',
-    'models' => []
+    'name' => 'BMW'
 })
 manufacturer2.save()
 manufacturer3 = Manufacturer.new({
-    'name' => 'Toyota',
-    'models' => []
+    'name' => 'Toyota'
 })
 manufacturer3.save()
 
@@ -42,10 +39,9 @@ car1.save()
 
 
 # UPDATE/DELETE
- manufacturer1.models.push(car1.model)
- manufacturer1.update()
+ 
 
-# manufacturer1.delete()
+
 
 
 
