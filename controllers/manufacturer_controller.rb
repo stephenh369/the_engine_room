@@ -19,6 +19,11 @@ get '/manufacturers/:id' do
     erb(:"manufacturers/show")
 end
 
+get '/manufacturers/:id/edit' do
+    @manufacturer = Manufacturer.find(params[:id].to_i)
+    erb(:"manufacturers/edit")
+end
+
 post '/manufacturers' do
     Manufacturer.new(params).save()
     redirect "/manufacturers"
@@ -27,5 +32,11 @@ end
 post '/manufacturers/:id/delete' do
     @manufacturer = Manufacturer.find(params[:id].to_i)
     @manufacturer.delete()
+    redirect "/manufacturers"
+end
+
+post '/manufacturers/:id' do
+    @manufacturer = Manufacturer.new(params)
+    @manufacturer.update()
     redirect "/manufacturers"
 end
