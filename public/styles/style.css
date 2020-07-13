@@ -167,3 +167,11 @@ body {
 .stock-span-3 {
     color: blue;
 }
+
+.span-profit {
+    color: green;
+}
+
+.span-loss {
+    color: red;
+}

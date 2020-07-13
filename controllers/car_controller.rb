@@ -25,6 +25,13 @@ get '/cars/:id' do
     elsif @car.stock > 1
         @span3 = "More Than 1 Available (#{@car.stock})"
     end
+
+    profit_margin = @car.sell_price - @car.buy_price
+    if  profit_margin > 0
+        @span_profit = "+#{@car.sell_price - @car.buy_price}"
+    elsif profit_margin < 0
+        @span_loss = "-#{@car.sell_price - @car.buy_price}"
+    end
     erb(:"cars/show")
 end
 

@@ -13,7 +13,9 @@
         <span class="stock-span-2"><%= @span2 %></span>
         <span class="stock-span-3"><%= @span3 %></span></p>
         <p class="show-info">Buy Price: £<%= @car.buy_price %></p>
-        <p class="show-info">Sell Price: £<%= @car.sell_price %></p>
+        <p class="show-info">Sell Price: £<%= @car.sell_price %> 
+        <span class="span-profit"><%= @span_profit %></span>
+        <span class="span-loss"><%= @span_loss %></span></p>
         <hr/>
         <div class ="btn-div">
             <form method="get" action="/cars">
