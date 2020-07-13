@@ -3,7 +3,12 @@
 <form method="post" action="/manufacturers">
     <label for="name-input">Manufacturer Name: </label>
         <input id="name-input" type="text" name="name"/>
-    <hr/>
-    <a class="btn" href="/manufacturers">Back To Inventory</a>
+
     <input class="btn" type="submit" value="Add Manufacturer"/>
 </form>
+<hr/>
+ <div class="new-entry-div">
+        <form method="get" action="/manufacturers">
+            <input class="btn btn-show" type="submit" value="Back To Inventory"/>
+        </form>
+    </div>
