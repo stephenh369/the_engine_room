@@ -30,7 +30,7 @@ get '/cars/:id' do
     if  profit_margin > 0
         @span_profit = "+#{@car.sell_price - @car.buy_price}"
     elsif profit_margin < 0
-        @span_loss = "-#{@car.sell_price - @car.buy_price}"
+        @span_loss = "#{@car.sell_price - @car.buy_price}"
     end
     erb(:"cars/show")
 end
