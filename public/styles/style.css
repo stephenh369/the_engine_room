@@ -19,9 +19,6 @@ h1, h3 {
     text-align: center;
 }
 
-/* .header {
-  
-} */
 
 body {
     background-color: var(--dark-color);
@@ -52,7 +49,7 @@ body {
 }
 
 .obj-container {
-    margin-top: 1rem;
+    margin-top: 0.85rem;
     display: grid;
     justify-items: center;
     row-gap: 0.5rem;
@@ -115,10 +112,13 @@ body {
 
 .logo-index {
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 2fr 5fr 2fr;
+    align-items: center;
+    justify-items: center;
     margin-left: 10px;
     margin-right: 10px;
 }
+
 
 /* UTILITY */
 
