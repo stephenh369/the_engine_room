@@ -9,15 +9,21 @@ Car.delete_all()
 
 # OBJECTS
 manufacturer1 = Manufacturer.new({
-    'name' => 'Ford'
+    'name' => 'Ford',
+    'hq' => 'Michigan, Detroit, USA',
+    'tel_no' => '020 3564 4444'
 })
 manufacturer1.save()
 manufacturer2 = Manufacturer.new({
-    'name' => 'BMW'
+    'name' => 'BMW',
+    'hq' => 'Munich, Germany',
+    'tel_no' => '0800 325600'
 })
 manufacturer2.save()
 manufacturer3 = Manufacturer.new({
-    'name' => 'Toyota'
+    'name' => 'Toyota',
+    'hq' => 'Toyota, Aichi, Japan',
+    'tel_no' => '0344 701 6202'
 })
 manufacturer3.save()
 

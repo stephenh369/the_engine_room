@@ -3,7 +3,9 @@ DROP TABLE IF EXISTS manufacturers;
 
 CREATE TABLE manufacturers (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255)
+    name VARCHAR(255),
+    hq VARCHAR(255),
+    tel_no VARCHAR(255)
 );
 
 CREATE TABLE cars (
