@@ -14,12 +14,12 @@
 
 <ul class="obj-div">
     <% for manufacturer in @manufacturers %>
-    <li class="obj-container">
+    <li class="obj-container-manu">
         <p class="obj-header">Manufacturer Name: <%= manufacturer.name %></p>
-        <p class="obj-header">Manufacturer Name: <%= manufacturer.hq %></p>
-        <p class="obj-header">Manufacturer Name: <%= manufacturer.tel_no %></p>
+        <p class="obj-header">HQ: <%= manufacturer.hq %></p>
+        <p class="obj-header">Telephone Number: <%= manufacturer.tel_no %></p>
         <a class="btn" href="/manufacturers/<%= manufacturer.id %>">Details</a>
     </li>
     <% end %>
-    <li><a class="obj-container" id="obj-container-placeholder" href="/manufacturers/new">New Entry(Manufacturer)</a></li>
+    <li><a class="obj-container" id="obj-container-placeholder" href="/manufacturers/new">+</a></li>
 </ul>

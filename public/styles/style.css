@@ -45,15 +45,39 @@ body {
 .obj-div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.5rem;
+    grid-gap: 0.75rem;
     margin: 5px;
     margin-right: 7px;
     list-style: none;
 }
 
 .obj-container {
+    margin-top: 1rem;
     display: grid;
-    justify-items: end;
+    justify-items: center;
+    row-gap: 0.5rem;
+}
+
+.obj-container-manu {
+    margin-top: 1rem;
+    display: grid;
+    justify-items: start;
+    row-gap: 0.5rem;
+}
+
+#obj-container-placeholder {
+    text-decoration: none;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    font-size: 5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#obj-container-placeholder:hover {
+    color: var(--alt-color);
+    border: 2px solid var(--alt-color);
 }
 
 .btn-div {
