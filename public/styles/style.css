@@ -19,6 +19,10 @@ h1, h3 {
     text-align: center;
 }
 
+/* .header {
+  
+} */
+
 body {
     background-color: var(--dark-color);
     color: var(--light-color);
@@ -28,7 +32,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 15%;
 }
 
 .index-nav {
@@ -65,6 +68,20 @@ body {
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 1fr 1fr;
     width: 50%;
+}
+
+
+.logo-home {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+.logo-index {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* UTILITY */
