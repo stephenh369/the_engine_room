@@ -96,6 +96,10 @@ body {
     width: 50%;
 }
 
+.new-entry-div-manu {
+    grid-template-rows: repeat(1, 1fr);
+}
+
 #show-info-manu {
     margin: 10px;
 }

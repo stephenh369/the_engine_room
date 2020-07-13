@@ -1,6 +1,6 @@
 <h3>Edit Entry</h3>
 
-<form method="post" action="/manufacturers/<%= @manufacturer.id %>">
+<form class="new-entry-div new-entry-div-manu" method="post" action="/manufacturers/<%= @manufacturer.id %>">
     <label for="name-input">Manufacturer Name: </label>
         <input id="name-input" type="text" name="name" value="<%= @manufacturer.name %>"/>
 
@@ -10,11 +10,14 @@
     <label for="tel_no-input">Manufacturer Telephone Number: </label>
         <input id="tel_no-input" type="text" name="tel_no" value="<%= @manufacturer.tel_no %>"/>
 
-    <input class="btn" type="submit" value="Edit Manufacturer"/>
+    <input class="btn btn-show" type="submit" value="Edit Manufacturer"/>
 </form>
 <hr/>
- <div class="new-entry-div">
-        <form method="get" action="/manufacturers">
+<div class="new-entry-div">
+    <form method="get" action="/manufacturers/<%= @manufacturer.id %>">
+        <input class="btn btn-show" type="submit" value="Back To Details"/>
+    </form>
+    <form method="get" action="/manufacturers">
             <input class="btn btn-show" type="submit" value="Back To Inventory"/>
-        </form>
-    </div>
+    </form>
+</div>
