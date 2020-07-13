@@ -1,16 +1,21 @@
-<div class="show-info-div">
+<div class="show-info-div" id="show-info-manu">
     <p class="show-info">Manufacturer Name: <%= @manufacturer.name %></p>
     <p class="show-info">Manufacturer Name: <%= @manufacturer.hq %></p>
     <p class="show-info">Manufacturer Name: <%= @manufacturer.tel_no %></p>
-    <hr/>
+</div>
 
-    <div class ="btn-div">
-        <form method="get" action="/manufacturers">
-            <input class="btn btn-show" type="submit" value="Back To Inventory"/>
-        </form>
+<hr/>
+
+<div class ="btn-div" id="btn-div-manu">
+    <form method="get" action="/manufacturers">
+        <input class="btn btn-show" type="submit" value="Back To Inventory"/>
+    </form>
+
+    <form method="get" action="/manufacturers/<%= @manufacturer.id %>/edit">
+        <input class="btn btn-show" type="submit" value="Edit"/>
+    </form>
             
-        <form method="post" action="/manufacturers/<%= @manufacturer.id %>/delete">
-            <input class="btn btn-show" type="submit" value="Delete Manufacturer"/>
-        </form>
-    </div>
+    <form method="post" action="/manufacturers/<%= @manufacturer.id %>/delete">
+        <input class="btn btn-show" type="submit" value="Delete Manufacturer"/>
+    </form>
 </div>

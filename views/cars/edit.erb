@@ -1,6 +1,6 @@
 <h3>Edit Entry</h3>
 
-<form method="post" action="/cars/<%= @car.id %>">
+<form class="new-entry-div" method="post" action="/cars/<%= @car.id %>">
     <label for="manufacturer-select">Manufacturer: </label>
         <select id="manufacturer-select" name="manufacturer">
             <% @manufacturers.each do |manufacturer| %>
@@ -63,6 +63,16 @@
 
     <label for="sell_price-input">Sell Price: £ </label>
         <input id="sell_price-input" type="number" name="sell_price" value="<%= @car.sell_price %>"/>
-    <hr/>
-    <input class="btn" type="submit" value="Update Car"/>
+
+    <input class="btn btn-show" type="submit" value="Update Car"/>
 </form>
+<hr/>
+  
+<div class="new-entry-div">
+    <form method="get" action="/cars/<%= @car.id %>">
+        <input class="btn btn-show" type="submit" value="Back To Details"/>
+    </form>
+     <form method="get" action="/cars">
+        <input class="btn btn-show" type="submit" value="Back To Inventory"/>
+    </form>
+</div>
