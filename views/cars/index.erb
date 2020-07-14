@@ -25,3 +25,21 @@
     <% end %>
     <li><a class="obj-container" id="obj-container-placeholder" href="/cars/new">+</a></li>
 </ul>
+
+<div class="header">
+    <h3>Filter By</h3>
+</div>
+
+<div class ="filter-div">
+    <form class="filter-item" method="get" action="/cars/filter/ford">
+        <input class="btn btn-show" type="submit" value="Filter By Ford"/>
+    </form>
+
+    <form class="filter-item" method="get" action="/cars/filter/bmw">
+        <input class="btn btn-show" type="submit" value="Filter By BMW"/>
+    </form>
+    
+    <form  class="filter-item" method="get" action="/cars/filter/toyota">
+        <input class="btn btn-show" type="submit" value="Filter By Toyota"/>
+    </form>
+</div>

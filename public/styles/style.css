@@ -119,6 +119,13 @@ body {
     margin-right: 10px;
 }
 
+.filter-div {
+    margin-top: 0.5rem;
+    text-align: center;
+}
+.filter-item {
+    display: inline-block;
+}
 
 /* UTILITY */
 

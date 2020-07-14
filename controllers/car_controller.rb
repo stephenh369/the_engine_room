@@ -57,3 +57,17 @@ post '/cars/:id' do
     @car.update()
     redirect "/cars"
 end
+
+
+# FILTERS
+
+get '/cars/filter/ford' do
+    @manufacturers = Manufacturer.all()
+    for manufacturer in @manufacturers
+        if manufacturer.name == 'Ford'
+            @cars = Car.by_manufacturer(manufacturer.id)
+        end
+    end
+    erb(:"cars/index")
+end
+
