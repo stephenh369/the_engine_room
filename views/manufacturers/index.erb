@@ -19,7 +19,9 @@
         <p class="obj-header">Manufacturer Name: <%= manufacturer.name %></p>
         <p class="obj-header">HQ: <%= manufacturer.hq %></p>
         <p class="obj-header">Telephone Number: <%= manufacturer.tel_no %></p>
-        <a class="btn" href="/manufacturers/<%= manufacturer.id %>">Details</a>
+        <form method="get" action="/manufacturers/<%= manufacturer.id %>">
+            <input class="btn btn-show" type="submit" value="Details"/>
+        </form>
     </li>
     <% end %>
     <li><a class="obj-container" id="obj-container-placeholder" href="/manufacturers/new">+</a></li>

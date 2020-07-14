@@ -20,7 +20,9 @@
         <p class="obj-header">Model: <%= car.model %></p>
         <p class="obj-header">Year: <%= car.year %></p>
         <p class="obj-header">Sell Price: £<%= car.sell_price %></p>
-        <a class="btn" href="/cars/<%= car.id %>">Details</a>
+        <form method="get" action="/cars/<%= car.id %>">
+            <input class="btn btn-show" type="submit" value="Details"/>
+        </form>
     </li>
     <% end %>
     <li><a class="obj-container" id="obj-container-placeholder" href="/cars/new">+</a></li>
