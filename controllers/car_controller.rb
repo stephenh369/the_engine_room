@@ -61,6 +61,16 @@ end
 
 # FILTERS
 
+get '/cars/filter/bmw' do
+    @manufacturers = Manufacturer.all()
+    for manufacturer in @manufacturers
+        if manufacturer.name == 'BMW'
+            @cars = Car.by_manufacturer(manufacturer.id)
+        end
+    end
+    erb(:"cars/index")
+end
+
 get '/cars/filter/ford' do
     @manufacturers = Manufacturer.all()
     for manufacturer in @manufacturers
@@ -70,4 +80,15 @@ get '/cars/filter/ford' do
     end
     erb(:"cars/index")
 end
+
+get '/cars/filter/toyota' do
+    @manufacturers = Manufacturer.all()
+    for manufacturer in @manufacturers
+        if manufacturer.name == 'Toyota'
+            @cars = Car.by_manufacturer(manufacturer.id)
+        end
+    end
+    erb(:"cars/index")
+end
+
 
