@@ -88,6 +88,7 @@ body {
 
 .new-entry-div {
     display: grid;
+    margin-top: 5px;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 1fr 1fr;
     width: 50%;
@@ -97,6 +98,9 @@ body {
     grid-template-rows: repeat(1, 1fr);
 }
 
+.show-info-div {
+    margin: 10px;
+}
 #show-info-manu {
     margin: 10px;
 }
