@@ -83,4 +83,11 @@ class Car
         return result
     end
 
+    def self.by_manufacturer(manufacturer_id)
+        sql = "SELECT * FROM cars WHERE manufacturer = $1"
+        values = [manufacturer_id]
+        result = SqlRunner.run(sql, values)
+        return result.map() {|car| Car.new(car)}
+    end
+
 end
