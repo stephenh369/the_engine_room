@@ -49,7 +49,9 @@ Same as a new form, but this one retrieves previously entered information and al
 #### Show Details
 ![Show Details Page](/planning/screenshots/show_details_car.png)
 This is where you would find all the information about the car, you can find this for each entry by clicking the details button of the car you want to see on the stock list page.
+
 ![Show Details Page(stock = 0)](/planning/screenshots/show_details_car_0_stock.png)
-If all stock for car has currently been sold the colour of the stock text will change to visually highlight this.
+If all stock for car has currently been sold the colour of the stock text will change to visually highlight this, the profit margin between the buy and sell price of the car is also visually highlighted(+green if profit, -red if loss).
+
 ![Show Details Page](/planning/screenshots/show_details_car_more_stock_profit_loss.png)
-Same goes for if there is more than 1 of a similar car, for example a commercial vehicle or something in mass production. Also you can see between the last 2 screenshots the profit margin between the buy and sell price is also visually highlighted.
+Same goes for if there is more than 1 of a similar car, for example a commercial vehicle or something in mass production. This will be highlighted in blue with the actual stock number in parenthesis.
