@@ -40,3 +40,16 @@ Here we have all the cars currently stocked in a list that we can filter by manu
 #### Manufacturer List
 ![Manufacturer List](/planning/screenshots/manufacturer_list.png)
 Same as Stock List but with a list of manufacturers that the showroom currently stocks. Holds the name, address of HQ and a contact number. The manufacturer has to exist in the database before a new car by that manufacturer can be created, for example I can't add anything by Nissan yet until I add Nissan to the manufacturers list.
+#### New Car Form
+![New Car Form](/planning/screenshots/new_car_form.png)
+Just a simple form where you would enter details to add a new car to database.
+#### Edit Car Form
+![Edit Car Form](/planning/screenshots/edit_car_form.png)
+Same as a new form, but this one retrieves previously entered information and allows you to make changes.
+#### Show Details
+![Show Details Page](/planning/screenshots/show_details_car.png)
+This is where you would find all the information about the car, you can find this for each entry by clicking the details button of the car you want to see on the stock list page.
+![Show Details Page(stock = 0)](/planning/screenshots/show_details_car_0_stock.png)
+If all stock for car has currently been sold the colour of the stock text will change to visually highlight this.
+![Show Details Page](/planning/screenshots/show_details_car_more_stock_profit_loss.png)
+Same goes for if there is more than 1 of a similar car, for example a commercial vehicle or something in mass production. Also you can see between the last 2 screenshots the profit margin between the buy and sell price is also visually highlighted.
