@@ -16,6 +16,16 @@ get '/cars/new' do
     erb(:"cars/new")
 end
 
+
+# FILTER
+
+get '/cars/filter' do
+    @manufacturers = Manufacturer.all()
+    @cars = Car.by_manufacturer(params[:manufacturer].to_i)
+    erb(:"cars/index")
+end
+
+
 get '/cars/:id' do
     @car = Car.find(params[:id].to_i)
     if @car.stock == 0
@@ -57,38 +67,4 @@ post '/cars/:id' do
     @car.update()
     redirect "/cars"
 end
-
-
-# FILTERS
-
-get '/cars/filter/bmw' do
-    @manufacturers = Manufacturer.all()
-    for manufacturer in @manufacturers
-        if manufacturer.name == 'BMW'
-            @cars = Car.by_manufacturer(manufacturer.id)
-        end
-    end
-    erb(:"cars/index")
-end
-
-get '/cars/filter/ford' do
-    @manufacturers = Manufacturer.all()
-    for manufacturer in @manufacturers
-        if manufacturer.name == 'Ford'
-            @cars = Car.by_manufacturer(manufacturer.id)
-        end
-    end
-    erb(:"cars/index")
-end
-
-get '/cars/filter/toyota' do
-    @manufacturers = Manufacturer.all()
-    for manufacturer in @manufacturers
-        if manufacturer.name == 'Toyota'
-            @cars = Car.by_manufacturer(manufacturer.id)
-        end
-    end
-    erb(:"cars/index")
-end
-
 

@@ -33,15 +33,15 @@
 </div>
 
 <div class ="filter-div">
-    <form class="filter-item" method="get" action="/cars/filter/bmw">
-        <input class="btn btn-show" type="submit" value="Filter By BMW"/>
-    </form>
-    
-    <form class="filter-item" method="get" action="/cars/filter/ford">
-        <input class="btn btn-show" type="submit" value="Filter By Ford"/>
-    </form>
-    
-    <form  class="filter-item" method="get" action="/cars/filter/toyota">
-        <input class="btn btn-show" type="submit" value="Filter By Toyota"/>
+   
+    <form class="filter-item" method="get" action="/cars/filter">
+    <label for="manufacturer-select">Manufacturer:</label>
+    <select id="manufacturer-select" name="manufacturer">
+        <% @manufacturers.each do |manufacturer| %>
+        <option value="<%= manufacturer.id%>"><%= manufacturer.name%></option>
+        <% end %>
+    </select>
+
+        <input class="btn btn-show" type="submit" value="Filter"/>
     </form>
 </div>
