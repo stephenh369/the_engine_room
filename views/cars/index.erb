@@ -36,10 +36,13 @@
    
     <form class="filter-item" method="get" action="/cars/filter">
     <label for="manufacturer-select">Manufacturer:</label>
+
+    <%# for each element stored in the @manufacturers variable, 
+    create an option tag displaying each elements name with a value of their id %>
     <select id="manufacturer-select" name="manufacturer">
         <% @manufacturers.each do |manufacturer| %>
         <option value="<%= manufacturer.id%>"><%= manufacturer.name%></option>
-        <% end %>
+        <% end  %>
     </select>
 
         <input class="btn btn-show" type="submit" value="Filter"/>
